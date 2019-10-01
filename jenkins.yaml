@@ -78,7 +78,24 @@ spec:
   selector:
     app: jenkins
     tier: jenkins
-  type: NodePort
+  type: LoadBalancer
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: jenkins-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: jenkins.adelerhof.eu
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: jenkins-service
+          servicePort: http
 
 ---
 
