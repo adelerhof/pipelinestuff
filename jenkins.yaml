@@ -94,7 +94,7 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: jenkins-service
+          serviceName: jenkins
           servicePort: http
 
 ---
