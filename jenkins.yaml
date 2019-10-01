@@ -108,6 +108,9 @@ metadata:
 spec:
   strategy:
     type: Recreate
+  selector:
+    matchLabels:
+      app: jenkins
   template:
     metadata:
       labels:
