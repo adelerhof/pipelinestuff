@@ -138,11 +138,11 @@ spec:
           privileged: true
         volumeMounts:
         - name: kubeconfig
-          mountPath: /data/jenkins_home/.kube
+          mountPath: /var/jenkins_home/.kube
         - name: docker
           mountPath: /var/run/docker.sock
         - name: jenkins-persistent-storage
-          mountPath: /data/jenkins_home
+          mountPath: /var/jenkins_home
         ports:
         - containerPort: 8080
           name: jenkins
