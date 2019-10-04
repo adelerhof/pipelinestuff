@@ -35,7 +35,7 @@ kind: Service
 metadata:
   name: sonarqube-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: sonarqube
   ports:
