@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: sonarqube
+  name: sonarqube-deployment
 spec:
   replicas: 1
   selector:
@@ -10,7 +10,6 @@ spec:
   template:
     metadata:
       labels:
-        name: sonarqube
         app: sonarqube
     spec:
       containers:
