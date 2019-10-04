@@ -36,7 +36,7 @@ kind: Service
 metadata:
   labels:
     name: sonar
-  name: sonar
+  name: sonar-service
 spec:
   type: LoadBalancer
   selector:
