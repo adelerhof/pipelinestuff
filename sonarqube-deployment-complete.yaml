@@ -34,8 +34,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    name: sonar
   name: sonar-service
 spec:
   type: LoadBalancer
@@ -45,8 +43,7 @@ spec:
     - port: 80
       targetPort: 9000
       name: sonarport
-  selector:
-    name: sonarqube
+
 
 ---
 apiVersion: extensions/v1beta1
@@ -63,4 +60,4 @@ spec:
       - path: /
         backend:
           serviceName: sonarqube-service
-          servicePort: http
+          servicePort: sonarport
