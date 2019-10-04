@@ -33,7 +33,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sonar-service
+  name: sonarqube-service
 spec:
   type: LoadBalancer
   selector:
