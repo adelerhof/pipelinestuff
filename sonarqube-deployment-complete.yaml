@@ -17,6 +17,7 @@ spec:
           args:
             - -Dsonar.web.context=/sonar
           name: sonarqube
+          app: sonarqube
           env:
             - name: SONARQUBE_JDBC_PASSWORD
               valueFrom:
