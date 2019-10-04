@@ -9,9 +9,9 @@ spec:
       app: sonarqube
   template:
     metadata:
-      name: sonarqube
       labels:
         name: sonarqube
+        app: sonarqube
     spec:
       containers:
         - image: sonarqube:7.7-community
